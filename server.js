@@ -6,14 +6,20 @@ const { ethers } = require('ethers');
 // const tweet = require('./tweet'); //  new v2 tweet library
 // const cache = require('./cache');
 
-const timeStamp = moment().unix();
+// use this with an if file exists kinda thing instead of cache.get...
+// const lastSaleTime = cache.get('lastSaleTime', null) || moment().startOf('minute').subtract(3600, "seconds").unix();
+
+const lastSaleTime = moment().unix();
+
+
 console.log('Collection: ' + process.env.COLLECTION)
 console.log('VARONE: ' + process.env.VARONE)
 console.log('VARTWO: ' + process.env.VARTWO)
-console.log(timeStamp);
+console.log(lastSaleTime);
 
 
-const fs = require('fs')
+const fs = require('fs');
+// const { times } = require('lodash');
 
 const datafile = '/data/test.txt'
 /*
@@ -27,7 +33,7 @@ if (fs.existsSync(datafile)) {
 */
 
 /*
-fs.writeFile("/data/test.txt", timeStamp, err => {
+fs.writeFile("/data/test.txt", lastSaleTime, err => {
   if (err) {
     console.error(err)
       return
@@ -36,9 +42,9 @@ fs.writeFile("/data/test.txt", timeStamp, err => {
   })
 */
 
-let data = "This is a file containing a collection of books.";
+// let data = "This is a file containing a collection of books.";
   
-  fs.writeFile("/data/test.txt", data, (err) => {
+  fs.writeFile("/data/test.txt", lastSaleTime.toString(), (err) => {
     if (err)
       console.log(err);
     else {
