@@ -1,13 +1,17 @@
 {
-    "name": "docker_web_app",
-    "version": "1.0.0",
-    "description": "Node.js on Docker",
-    "author": "First Last <first.last@example.com>",
-    "main": "server.js",
-    "scripts": {
-      "start": "node server.js"
-    },
-    "dependencies": {
-      "express": "^4.16.1"
-    }
+  "name": "pixa-salesbot",
+  "version": "1.0.0",
+  "description": "sales bot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "First Last <first.last@example.com>",
+  "dependencies": {
+      "axios": "^0.21.1",
+      "ethers": "^5.3.1",
+      "lodash": "^4.17.21",
+      "moment": "^2.29.1",
+      "twitter-api-v2": "1.9.1"
   }
+}
