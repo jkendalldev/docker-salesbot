@@ -1,7 +1,6 @@
 # docker-salesbot
 
 ## Docker Install Steps for AWS Server
-
 * Mostly taken from: https://docs.docker.com/engine/install/debian/
 * sudo apt-get update
 * sudo apt-get install ca-certificates curl gnupg lsb-release
@@ -18,6 +17,20 @@
 * sudo systemctl enable containerd.service
 * "docker ps" and "docker images" commands should work without errors at this point
 
+## Login and Pull the image from DockerHub
+* docker login -u jkendall1975 (*provide dockerhub access token when prompted for passwd.)
+* docker pull jkendall1975/pixa-salesbot
+* Test running the image as a container:
+* docker run --rm --volume pixa-vol:/data --name salesbot -e COLLECTION=pixawizards jkendall1975/pixa-salesbot:latest
+
+## TODOS
+* DONE - INSTALL DOCKER ON THE PIXA EC2 INSTANCE NEXT
+* PENDING - ADD API KEYS FOR OPENSEA/TWITTER INTO .env FILE THAT GETS BUILT INTO THE DOCKER CONTAINER, BUT
+* MAKE SURE TO NOT ADD .env FILE TO GITHUB! (Use .gitignore file.)
+* PUSH FRESH IMAGE TO DOCKER HUB, AND TRY TO PULL IT ONTO THE PIXA EC2, AND TRY TO RUN IT DOCKER RUN...BUT TRY TO RUN IT WITH THE -v FLAG AND NOT --volume
+* docker run --rm --volume pixa-vol:/data --name salesbot -e COLLECTION=pixawizards --env-file ~/pixa-salesbot/.secrets jkendall1975/pixa-salesbot:latest
+* ADD .env FILE INTO PROJECT, BUT DO NOT CHECK THIS INTO GITHUB (UPDATE .gitignore), BUT DO BUILD IT WITH THE DOCKER IMAGE SO THAT THE CONTAINER HAS ACCESS TO ENV VARS IT NEEDS.
+* TEST ALL THIS USING RINKEBY NETWORK/ TEST PROJECT ON TEST OPENSEA
 
 
 

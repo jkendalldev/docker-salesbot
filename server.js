@@ -1,12 +1,3 @@
-// TODOS
-// 1. INSTALL DOCKER ON THE PIXA EC2 INSTANCE NEXT
-// 2. PUSH FRESH IMAGE TO DOCKER HUB, AND TRY TO PULL IT ONTO THE PIXA EC2, AND TRY TO RUN IT
-// 3. DOCKER RUN...BUT TRY TO RUN IT WITH THE -v FLAG AND NOT --volume
-// 4. docker run --rm --volume pixa-vol:/data --name salesbot -e COLLECTION=pixawizards --env-file ~/pixa-salesbot/.secrets jkendall1975/pixa-salesbot:latest
-// ADD .env FILE INTO PROJECT, BUT DO NOT CHECK THIS INTO GITHUB (UPDATE .gitignore), BUT DO BUILD IT WITH
-// THE DOCKER IMAGE SO THAT THE CONTAINER HAS ACCESS TO ENV VARS IT NEEDS.
-// TEST ALL THIS USING RINKEBY NETWORK/ TEST PROJECT ON TEST OPENSEA
-
 const axios = require('axios');
 const _ = require('lodash');
 const moment = require('moment');
