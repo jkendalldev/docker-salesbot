@@ -23,5 +23,5 @@
 * Test running the image as a container:
 * docker run --rm --volume pixa-vol:/data --name salesbot -e COLLECTION=pixawizards jkendall1975/pixa-salesbot:latest
 
-## TODOS
+## TODOS ...
 * DONE - INSTALL DOCKER ON THE PIXA EC2 INSTANCE NEXT
