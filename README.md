@@ -18,7 +18,7 @@
 * "docker ps" and "docker images" commands should work without errors at this point
 
 ## Login and Pull the image from DockerHub
-* docker login -u jkendall1975 (*provide dockerhub access token when prompted for passwd.)
+* docker login -u <DOCKER_USER> (*provide dockerhub access token when prompted for passwd.)
 * docker pull jkendall1975/pixa-salesbot
 * Test running the image as a container:
 * docker run --rm --volume pixa-vol:/data --name salesbot -e COLLECTION=pixawizards jkendall1975/pixa-salesbot:latest
