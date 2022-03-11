@@ -2,6 +2,7 @@ const axios = require('axios');
 const _ = require('lodash');
 const moment = require('moment');
 const { ethers } = require('ethers');
+require('dotenv').config();
  
 // const tweet = require('./tweet'); //  new v2 tweet library
 // const cache = require('./cache');
@@ -13,15 +14,17 @@ const lastSaleTime = moment().unix();
 
 
 console.log('Collection: ' + process.env.COLLECTION)
-console.log('VARONE: ' + process.env.VARONE)
-console.log('VARTWO: ' + process.env.VARTWO)
+console.log('TEST_ENV_VARS1: ' + process.env.TEST_ENV_VARS1)
+console.log('TEST_ENV_VARS2: ' + process.env.TEST_ENV_VARS2)
+
 console.log(lastSaleTime);
 
-
 const fs = require('fs');
+
+
 // const { times } = require('lodash');
 
-const datafile = '/data/test.txt'
+// const datafile = '/data/test.txt'
 /*
 if (fs.existsSync(datafile)) {
   fs.readFile(datafile, 'utf8', function(err, data){
@@ -43,7 +46,7 @@ fs.writeFile("/data/test.txt", lastSaleTime, err => {
 */
 
 // let data = "This is a file containing a collection of books.";
-  
+  /*
   fs.writeFile("/data/test.txt", lastSaleTime.toString(), (err) => {
     if (err)
       console.log(err);
@@ -53,7 +56,7 @@ fs.writeFile("/data/test.txt", lastSaleTime, err => {
       console.log(fs.readFileSync("/data/test.txt", "utf8"));
     }
   });
-
+*/
 /*
 fs.readFile(datafile, 'utf8', function(err, data){
   // Display the file content
